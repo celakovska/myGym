@@ -502,8 +502,9 @@ class Protorewards(Reward):
         # Initialize ideal distance on first frame
         if self.last_approach_dist is None:
             self.last_approach_dist = dist
-            self.ideal_grasp_dist = dist  # Store initial distance as ideal
             self.grasp_within_threshold_count = 0
+        if self.ideal_grasp_dist is None:
+            self.ideal_grasp_dist = dist  # Store initial distance as ideal
         if self.last_grip_dist is None:
             self.last_grip_dist = gripdist
         
