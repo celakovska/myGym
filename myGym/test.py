@@ -615,7 +615,7 @@ def main() -> None:
     
     if arg_dict.get("pretrained_model") is None:
         print_init_info(arg_dict)
-        arg_dict["gui"] = 1
+        #arg_dict["gui"] = 1
         arg_dict = automatic_argument_assignment(arg_dict)
         #arg_dict["robot_action"] = "absolute_gripper"
         env = configure_env(arg_dict, model_logdir=None, for_train=0)
